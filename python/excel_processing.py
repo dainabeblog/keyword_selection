@@ -11,12 +11,12 @@ start = time.time()
 
 # ファイルパス
 # 開発用
-file_path = "/Users/watanabedaichi/Desktop/tomap/kw_selection/python/development.xlsm"
+file_path = "/Users/watanabedaichi/Desktop/tomap/kw_selection/python/development.xlsx"  # .xlsm -> .xlsx
 # 本番用
-# file_path = "/Users/watanabedaichi/Desktop/tomap/kw_selection/python/ks_sideline-recommendation.xlsm"
+# file_path = "/Users/watanabedaichi/Desktop/tomap/kw_selection/python/ks_sideline-recommendation.xlsx"  # .xlsm -> .xlsx
 
 # ワークブックを開く
-book = openpyxl.load_workbook(file_path, keep_vba=True)
+book = openpyxl.load_workbook(file_path)  # remove the 'keep_vba=True' option
 
 # ターゲットのシートを取得
 target_sheet = book['10位以内にランクインしているKW']
